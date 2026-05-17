@@ -15,7 +15,7 @@ jobs:
         continue-on-error: true
         uses: actions-for-kicad/kicad-actions@v2-k10.0
         with:
-          schematic_file_name: ./your-project.kicad_sch
+          schematic_file_name: ./sample-board.kicad_sch
           run_erc: true
 
       - name: Update ERC badge
@@ -49,7 +49,7 @@ jobs:
         continue-on-error: true
         uses: actions-for-kicad/kicad-actions@v2-k10.0
         with:
-          pcb_file_name: ./your-project.kicad_pcb
+          pcb_file_name: ./sample-board.kicad_pcb
           run_drc: true
 
       - name: Update DRC badge
