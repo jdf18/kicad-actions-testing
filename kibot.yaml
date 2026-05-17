@@ -54,13 +54,12 @@ outputs:
         - from_output: JLCPCB_drill
           dest: /
 
-  - name: schematic_image
-    comment: Schematic image
-    type: sch_print
+  - name: schematic_svg
+    comment: Schematic SVG (convert to PNG)
+    type: svg_sch_print
     dir: Fabrication/Images
     options:
-      output: schematic.png
-      format: PNG
+      output: schematic.svg
 
   - name: pcb_render
     comment: PCB 3D render

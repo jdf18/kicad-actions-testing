@@ -20,6 +20,9 @@ jobs:
       - name: Run KiBot outputs
         run: kibot -c kibot.yaml
 
+      - name: Convert schematic SVG to PNG
+        run: convert -density 150 Fabrication/Images/schematic.svg Fabrication/Images/schematic.png
+
       - name: Create GitHub Release Assets
         uses: softprops/action-gh-release@v2
         with:
