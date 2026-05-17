@@ -20,16 +20,30 @@ jobs:
       - name: Run KiBot outputs
         run: kibot -c kibot.yaml
 
-      - name: Create GitHub Release
+      - name: Create GitHub Release Assets
         uses: softprops/action-gh-release@v2
         with:
           files: |
             Fabrication/PDFs/*.pdf
+            Fabrication/PDFs/*.svg
+            Fabrication/Images/*.png
+            Fabrication/Images/*.svg
             Fabrication/JLCPCB/*.zip
             Fabrication/ibom/*.html
           body: |
             ## Fabrication outputs for ${{ github.ref_name }}
+
+            ### PCB Render
+            ![PCB Render](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-render.png)
+
+            ### Schematic
+            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/schematic.svg)
+
+            ### PCB Layers
+            ![PCB Copper](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-copper.svg)
+
             - Schematic PDF attached below
+            - PCB layers PDF attached below
             - JLCPCB gerber zip attached below
             - Interactive iBOM attached below
         env:

@@ -53,3 +53,45 @@ outputs:
           dest: /
         - from_output: JLCPCB_drill
           dest: /
+
+  - name: schematic_svg
+    comment: Schematic image
+    type: svg_sch_print
+    dir: Fabrication/PDFs
+
+  - name: pcb_render
+    comment: PCB 3D render
+    type: render_3d
+    dir: Fabrication/Images
+    options:
+      ray_tracing: true
+      width: 1920
+      height: 1080
+      output: pcb-render.png
+
+  - name: pcb_copper_pdf
+    comment: PCB copper layers PDF
+    type: pdf_pcb_print
+    dir: Fabrication/PDFs
+    options:
+      output: pcb-copper.pdf
+    layers:
+      - F.Cu
+      - B.Cu
+      - F.Silkscreen
+      - B.Silkscreen
+      - Edge.Cuts
+
+  - name: pcb_copper_image
+    comment: PCB copper layers image
+    type: pcb_print
+    dir: Fabrication/Images
+    options:
+      output: pcb-copper.svg
+      format: SVG
+    layers:
+      - F.Cu
+      - B.Cu
+      - F.Silkscreen
+      - B.Silkscreen
+      - Edge.Cuts
