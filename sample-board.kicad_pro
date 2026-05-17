@@ -56,19 +56,11 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "silk_overlap|149849524|96069961|3db04087-f88c-45ce-9dde-3ddaf72d7417|7358ae7f-b73e-4898-b27a-077fac1a1453",
+          "silk_overlap|150325714|95911200|3db04087-f88c-45ce-9dde-3ddaf72d7417|7358ae7f-b73e-4898-b27a-077fac1a1453",
           ""
         ],
         [
-          "silk_overlap|160744286|90900000|69f8be43-8167-4d85-bd01-e4972c0b0d5f|801e48d8-6a4b-4357-9a70-8bddbbea7d94",
-          ""
-        ],
-        [
-          "silk_overlap|161680742|87935744|5280725a-932f-494f-b58b-dc5630f91d9f|8ed030b6-45a2-41a8-b581-538bf4a6a7e1",
-          ""
-        ],
-        [
-          "silk_overlap|162329714|84274819|80412a79-babf-4f38-b64a-6976b1904c75|96d3655e-91a8-45ba-801c-241e31c6ae2c",
+          "silk_overlap|159329524|90900000|69f8be43-8167-4d85-bd01-e4972c0b0d5f|801e48d8-6a4b-4357-9a70-8bddbbea7d94",
           ""
         ]
       ],
