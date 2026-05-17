@@ -37,10 +37,10 @@ jobs:
             ![PCB Render](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-render.png)
 
             ### Schematic
-            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/schematic.svg)
+            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/schematic.png)
 
             ### PCB Layers
-            ![PCB Copper](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-copper.svg)
+            ![PCB Copper](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-copper.png)
 
             - Schematic PDF attached below
             - PCB layers PDF attached below
