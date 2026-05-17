@@ -35,6 +35,10 @@ jobs:
           name: erc-report
           path: erc.rpt
 
+      - name: Print ERC errors
+        if: steps.erc.outcome == 'failure'
+        run: cat erc.rpt
+
       - name: Fail if ERC failed
         if: steps.erc.outcome == 'failure'
         run: exit 1
@@ -68,6 +72,10 @@ jobs:
         with:
           name: drc-report
           path: drc.rpt
+
+      - name: Print DRC errors
+        if: steps.drc.outcome == 'failure'
+        run: cat drc.rpt
 
       - name: Fail if DRC failed
         if: steps.drc.outcome == 'failure'
