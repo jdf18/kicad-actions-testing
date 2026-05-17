@@ -9,7 +9,7 @@ jobs:
   fabrication:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/inti-cmnb/kicad9_auto:1.8.3
+      image: ghcr.io/inti-cmnb/kicad10_auto:1.8.3
       options: --user root
 
     steps:
