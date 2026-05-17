@@ -56,10 +56,11 @@ outputs:
 
   - name: schematic_image
     comment: Schematic image
-    type: png_sch_print
+    type: sch_print
     dir: Fabrication/Images
     options:
       output: schematic.png
+      format: PNG
 
   - name: pcb_render
     comment: PCB 3D render
