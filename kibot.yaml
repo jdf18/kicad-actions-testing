@@ -3,7 +3,7 @@ kibot:
 
 preflight:
   erc: true
-  run_drc: true
+  drc: true
 
 outputs:
   - name: schematic_pdf
@@ -71,16 +71,17 @@ outputs:
 
   - name: pcb_copper_pdf
     comment: PCB copper layers PDF
-    type: pdf_pcb_print
+    type: pcb_print
     dir: Fabrication/PDFs
     options:
       output: pcb-copper.pdf
-    layers:
-      - F.Cu
-      - B.Cu
-      - F.Silkscreen
-      - B.Silkscreen
-      - Edge.Cuts
+      format: PDF
+      layers:
+        - layer: F.Cu
+        - layer: B.Cu
+        - layer: F.Silkscreen
+        - layer: B.Silkscreen
+        - layer: Edge.Cuts
 
   - name: pcb_copper_image
     comment: PCB copper layers image
@@ -89,9 +90,9 @@ outputs:
     options:
       output: pcb-copper.svg
       format: SVG
-    layers:
-      - F.Cu
-      - B.Cu
-      - F.Silkscreen
-      - B.Silkscreen
-      - Edge.Cuts
+      layers:
+        - layer: F.Cu
+        - layer: B.Cu
+        - layer: F.Silkscreen
+        - layer: B.Silkscreen
+        - layer: Edge.Cuts
