@@ -78,12 +78,13 @@ outputs:
     options:
       output: pcb-copper.pdf
       format: PDF
-      layers:
-        - layer: F.Cu
-        - layer: B.Cu
-        - layer: F.Silkscreen
-        - layer: B.Silkscreen
-        - layer: Edge.Cuts
+      pages:
+        - layers:
+            - layer: F.Cu
+            - layer: B.Cu
+            - layer: F.Silkscreen
+            - layer: B.Silkscreen
+            - layer: Edge.Cuts
 
   - name: pcb_copper_image
     comment: PCB copper layers image
@@ -92,9 +93,11 @@ outputs:
     options:
       output: pcb-copper.png
       format: PNG
-      layers:
-        - layer: F.Cu
-        - layer: B.Cu
-        - layer: F.Silkscreen
-        - layer: B.Silkscreen
-        - layer: Edge.Cuts
+      pages:
+        - layers:
+            - layer: F.Cu
+            - layer: B.Cu
+            - layer: F.Silkscreen
+            - layer: B.Silkscreen
+            - layer: Edge.Cuts
+
