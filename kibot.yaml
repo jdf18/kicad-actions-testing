@@ -76,7 +76,7 @@ outputs:
     type: pcb_print
     dir: Fabrication/PDFs
     options:
-      output: pcb-copper.pdf
+      output: pcb-copper-%d.pdf
       format: PDF
       pages:
         - layers:
@@ -91,7 +91,7 @@ outputs:
     type: pcb_print
     dir: Fabrication/Images
     options:
-      output: pcb-copper.png
+      output: pcb-copper-%d.png
       format: PNG
       pages:
         - layers:
