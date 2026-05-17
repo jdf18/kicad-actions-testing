@@ -8,6 +8,8 @@ on:
 jobs:
   fabrication:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: ghcr.io/inti-cmnb/kicad10_auto:latest
       options: --user root
