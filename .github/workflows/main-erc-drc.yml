@@ -1,0 +1,74 @@
+name: Main Branch ERC & DRC
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  erc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run ERC
+        id: erc
+        continue-on-error: true
+        uses: actions-for-kicad/kicad-actions@v2-k10.0
+        with:
+          schematic_file_name: ./your-project.kicad_sch
+          run_erc: true
+
+      - name: Update ERC badge
+        uses: Schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: e06bed1310116b8d6ef28bf4d845b340
+          filename: erc-badge.json
+          label: ERC
+          message: ${{ steps.erc.outcome == 'success' && 'passing' || 'failing' }}
+          color: ${{ steps.erc.outcome == 'success' && 'brightgreen' || 'red' }}
+
+      - name: Upload ERC report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: erc-report
+          path: erc.rpt
+
+      - name: Fail if ERC failed
+        if: steps.erc.outcome == 'failure'
+        run: exit 1
+
+  drc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run DRC
+        id: drc
+        continue-on-error: true
+        uses: actions-for-kicad/kicad-actions@v2-k10.0
+        with:
+          pcb_file_name: ./your-project.kicad_pcb
+          run_drc: true
+
+      - name: Update DRC badge
+        uses: Schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: e06bed1310116b8d6ef28bf4d845b340
+          filename: drc-badge.json
+          label: DRC
+          message: ${{ steps.drc.outcome == 'success' && 'passing' || 'failing' }}
+          color: ${{ steps.drc.outcome == 'success' && 'brightgreen' || 'red' }}
+
+      - name: Upload DRC report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drc-report
+          path: drc.rpt
+
+      - name: Fail if DRC failed
+        if: steps.drc.outcome == 'failure'
+        run: exit 1
