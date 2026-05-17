@@ -1,4 +1,4 @@
 # kicad-actions-testing
 
-![ERC](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GIST_ID/raw/erc-badge.json)
-![DRC](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GIST_ID/raw/drc-badge.json)
+![ERC](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jdf18/e06bed1310116b8d6ef28bf4d845b340/raw/erc-badge.json)
+![DRC](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/jdf18/e06bed1310116b8d6ef28bf4d845b340/raw/drc-badge.json)
