@@ -1,0 +1,55 @@
+kibot:
+  version: 1
+
+preflight:
+  run_erc: true
+  run_drc: true
+
+outputs:
+  - name: schematic_pdf
+    comment: Schematic PDF
+    type: pdf_sch_print
+    dir: Fabrication/PDFs
+
+  - name: ibom
+    comment: Interactive BOM
+    type: ibom
+    dir: Fabrication/ibom
+    options:
+      name_format: "index"
+
+  - name: JLCPCB_gerbers
+    comment: Gerbers for JLCPCB
+    type: gerber
+    dir: Fabrication/JLCPCB_layers
+    options:
+      use_protel_extensions: true
+      subtract_mask_from_silk: true
+    layers:
+      - F.Cu
+      - B.Cu
+      - F.Paste
+      - B.Paste
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - Edge.Cuts
+
+  - name: JLCPCB_drill
+    comment: Drill files
+    type: excellon
+    dir: Fabrication/JLCPCB_layers
+    options:
+      pth_and_npth_single_file: false
+
+  - name: JLCPCB_zip
+    comment: ZIP for ordering
+    type: compress
+    dir: Fabrication/JLCPCB
+    options:
+      files:
+        - from_output: JLCPCB_gerbers
+          dest: /
+        - from_output: JLCPCB_drill
+          dest: /
