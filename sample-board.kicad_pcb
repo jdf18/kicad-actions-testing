@@ -94,7 +94,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Vertical, pin pitch=2.54mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Vertical pin pitch 2.54mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R1"
-			(at 1.051 1.5 0)
+			(at 2.575 1.754 0)
 			(layer "F.SilkS")
 			(uuid "80412a79-babf-4f38-b64a-6976b1904c75")
 			(effects
@@ -760,7 +760,7 @@
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm diameter 5mm width 2.5mm Capacitor")
 		(property "Reference" "C3"
-			(at 1.25 -1.562 0)
+			(at 1.25 -1.816 0)
 			(layer "F.SilkS")
 			(uuid "3db04087-f88c-45ce-9dde-3ddaf72d7417")
 			(effects
@@ -1593,7 +1593,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Vertical, pin pitch=2.54mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Vertical pin pitch 2.54mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R2"
-			(at 1.27 1.26 0)
+			(at 2.615 1.514 0)
 			(layer "F.SilkS")
 			(uuid "8ed030b6-45a2-41a8-b581-538bf4a6a7e1")
 			(effects
@@ -2181,7 +2181,7 @@
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm diameter 5mm width 2.5mm Capacitor")
 		(property "Reference" "C2"
-			(at 1.25 -1.37 0)
+			(at -0.26 -1.592 0)
 			(layer "F.SilkS")
 			(uuid "801e48d8-6a4b-4357-9a70-8bddbbea7d94")
 			(effects
