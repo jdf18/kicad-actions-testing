@@ -23,6 +23,9 @@ jobs:
       - name: Convert schematic SVG to PNG
         run: convert -density 150 Fabrication/Images/schematic.svg Fabrication/Images/schematic.png
 
+      - name: Convert pcb SVG to PNG
+        run: convert -density 150 Fabrication/Images/pcb-copper.svg Fabrication/Images/pcb-copper.png
+
       - name: Create GitHub Release Assets
         uses: softprops/action-gh-release@v2
         with:
@@ -40,7 +43,7 @@ jobs:
             ![PCB Render](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-render.png)
 
             ### Schematic
-            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/schematic.png)
+            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sample-board-assembly_page_01.png)
 
             ### PCB Layers
             ![PCB Copper](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-copper.png)

@@ -70,13 +70,15 @@ outputs:
       width: 1920
       height: 1080
       output: pcb-render.png
+      rotate_x: -30
+      rotate_z: -20
 
   - name: pcb_copper_pdf
     comment: PCB copper layers PDF
     type: pcb_print
     dir: Fabrication/PDFs
     options:
-      output: pcb-copper-%d.pdf
+      output: pcb-copper.pdf
       format: PDF
       pages:
         - layers:
@@ -91,8 +93,8 @@ outputs:
     type: pcb_print
     dir: Fabrication/Images
     options:
-      output: pcb-copper-%d.png
-      format: PNG
+      output: pcb-copper.svg
+      format: SVG
       pages:
         - layers:
             - layer: F.Cu
