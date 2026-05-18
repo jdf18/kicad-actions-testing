@@ -43,14 +43,16 @@ jobs:
             ![PCB Render](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-render.png)
 
             ### Schematic
-            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sample-board-assembly_page_01.png)
+            ![Schematic](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/schematic.png)
 
             ### PCB Layers
             ![PCB Copper](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-copper.png)
 
-            - Schematic PDF attached below
-            - PCB layers PDF attached below
-            - JLCPCB gerber zip attached below
-            - Interactive iBOM attached below
+            ### iBOM
+            [Interactive BOM](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sample-board-ibom.html)
+
+            - [Schematic PDF](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sample-board-schematic.pdf) attached below
+            - [PCB layers PDF](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/pcb-copper.pdf) attached below
+            - [JLCPCB gerber zip](https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sample-board-JLCPCB_zip.zip) attached below
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
